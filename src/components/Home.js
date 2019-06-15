@@ -1,33 +1,34 @@
 import React from "react";
-import "./Home.css";
 
 class Home extends React.Component {
   constructor() {
     super();
     this.state = {
-      imageUrl: "url(https://source.unsplash.com/1920x1080/?building,home)"
+      background: "img0",
+      i: 0
     };
+    this.increment = this.increment.bind(this)
+  }
+
+  // "url(" + response.url + ")"
+  increment() {
+    this.setState((prevstate) => ({
+      i: (prevstate.i + 1) % 4    
+    }))
   }
 
   componentDidMount() {
     setInterval(() => {
-      fetch("https://source.unsplash.com/1920x1080/?building,home").then(
-        response => {
-          this.setState(() => {
-            return {
-              imageUrl: "url(" + response.url + ")"
-            };
-          });
-        }
-      );
+      this.increment()
     }, 6000);
+    
   }
 
   render() {
     return (
       <div
         className="home"
-        // style={{ backgroundImage: this.state.imageUrl }}
+        style={{ backgroundImage: 'url(' + require(`./img/${this.state.i}.jpeg`) + ')' }}
       >
         <div className="motto">
           <h1>Modern Design & Casual Living</h1>
