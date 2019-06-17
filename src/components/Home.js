@@ -5,7 +5,7 @@ class Home extends React.Component {
     super();
     this.state = {
       background: "img0",
-      i: 0
+      i: 0,
     };
     this.increment = this.increment.bind(this);
   }
@@ -28,7 +28,7 @@ class Home extends React.Component {
       <div
         className="home"
         style={{
-          backgroundImage: "url(" + require(`./img/${this.state.i}.jpeg`) + ")"
+          backgroundImage: "url(" + require(`./img/${this.state.i}.jpeg`) + ")",
         }}
       >
         <div className="motto" data-aos="fade-up" data-aos-duration="1500">

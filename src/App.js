@@ -1,30 +1,23 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import AOS from "aos"
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import AOS from "aos";
 import "./App.css";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Property from "./components/Property";
-import Contact from "./components/Contact";
-import Connect from "./components/Connect";
-import Footer from "./components/Footer";
+import Main from "./components/Main";
+import PropertyPage from "./components/PropertyPage";
+import Error from "./components/Error";
 
-AOS.init()
+AOS.init();
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
-      <About />
-      <Property />
-      <Contact />
-      <Connect />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={Main} exact />
+        <Route component={Error} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

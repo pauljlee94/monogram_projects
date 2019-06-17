@@ -30,13 +30,10 @@ class Navbar extends React.Component {
         </h1>
         <ul>
           <li>
-            <a href="#">About</a>
-          </li>
-          <li>
             <a href="#">Portfolio</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>

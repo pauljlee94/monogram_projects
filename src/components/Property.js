@@ -1,9 +1,14 @@
 import React from "react";
 
+import PropertyPage from "./PropertyPage"
+
 class Property extends React.Component {
   render() {
     return (
-        <h1>hello</h1>
+        <div className="property">
+            <PropertyPage />
+            <h2>hello</h2>
+        </div>
     )
   }
 }

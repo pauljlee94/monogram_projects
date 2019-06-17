@@ -3,7 +3,19 @@ import React from "react";
 function Contact() {
   return (
     <div className="contact">
-      <h1>Contact Us</h1>
+      <a class="anchor" id="contact"></a>
+      <div className="contactText">
+        <h1>We can make your</h1>
+        <h1>dreams come true.</h1>
+        <hr/>
+        <p>If you have any questions, feel free to reach out to us.</p> 
+        <p>Someone will reach out to you soon.</p>
+        <br/>
+        <p className="address break">1234 Street Blvd.</p>
+        <p className="address">Atlanta, GA 12345</p>
+        <br/>
+        <p className="address">(123)456-7890</p>
+      </div>
       <div className="contactform">
         <form action="https://formspree.io/pauljlee94@gmail.com" method="POST">
           <div className="input">

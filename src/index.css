@@ -16,6 +16,7 @@
   align-items: center;
   width: 100%;
   height: 5em;
+  z-index: 100;
 }
 
 .navbar a {
@@ -83,7 +84,7 @@
 
 /* About CSS */
 .about {
-  padding: 3em;
+  padding: 2em 0 6em 0;
   margin: auto;
   background-color: whitesmoke;
 }
@@ -128,58 +129,145 @@
 
 /* Contact CSS */
 .contact {
-  padding: 5em 0;
-  background-color: white;
-  text-align: center;
-  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 2em 30px;
+  background-color: rgb(26, 28, 32);
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -120px;
+  visibility: hidden;
+}
+
+.contactText{
+  margin: auto;
+  padding-bottom: 40px;
+  width: 75vw;
 }
 
 .contact h1 {
-  margin: 1em auto 2em auto;
+  color: rgb(219, 219, 219);
   padding: 0;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+.contact hr {
+  margin: 10px 0 20px 0;
+  width: 300px;
+  border: 1px solid rgb(184, 184, 184);
+}
+
+.contact p {
+  font-size: 20px;
+  font-weight: 300;
+  color: rgb(219, 219, 219);
+}
+
+.address {
+  font-weight: 500 !important;
 }
 
 .contactform {
   margin: auto;
   display: block;
-  width: 80vw;
-}
-
-textarea {
-  width: 80vw;
-  height: 20em;
-  border: 1px solid rgb(145, 145, 145);
-  resize: none;
 }
 
 label {
+  color: white;
   float: left;
+  font-weight: 300;
 }
 
 input {
-  margin: 3px 0 10px 0;
-  width: 80vw;
+  color: white;
+  background-color: rgb(43, 46, 51);
+  margin: 3px 0 15px 0;
   font-size: 20px;
-  border: 1px solid rgb(145, 145, 145);
+  border: none;
+  border-bottom: 2px solid rgb(43, 46, 51);
+  width: 75vw;
+  height: 40px;
+  transition: border 500ms;
+}
+
+textarea {
+  height: 250px;
+  resize: none;
+  width: 75vw;
+  background-color: rgb(43, 46, 51);
+  margin: 3px 0 10px 0;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid rgb(43, 46, 51);
+  transition: border 500ms;
+}
+
+input:hover {
+  border-bottom: 2px solid white;
+  transition: border 500ms;
+}
+
+textarea:hover {
+  border-bottom: 2px solid white;
+  transition: border 500ms;
 }
 
 .submitButton {
-  width: 90px;
-  height: 30px;
-  margin: 1em auto;
+  width: 100px;
+  height: 40px;
+  margin: 10px auto;
   display: block;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
-  background-color: white;
+  background-color: rgb(43, 46, 51);
+  color: rgb(221, 221, 221);
+  border: 2px solid rgb(43, 46, 51);
 }
 
 .submitButton:hover {
-  background-color: rgb(218, 218, 218);
-  border: 1px solid rgb(145, 145, 145);
+  border: 2px solid white;
+  transition: border 500ms;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
+  .contact {
+    width: 650px;
+    margin: 2em auto;
+  }
+
+  .contactText {
+    width: 600px;
+  }
+
+  input {
+    width: 600px;
+  }
+
+  textarea {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact {
+    margin: 2em auto;
+    width: 950px;
+    flex-direction: row;
+    padding: 20px 30px;
+  }
+
+  .contactForm {
+    justify-self: center;
+  }
+
+  .contactText{
+    margin: 0 20px 0 0;
+  }
+
   .contactform {
     width: 500px;
   }
@@ -239,7 +327,6 @@ input {
 
 .footer ul {
   padding: 0;
-  display: flex;
   list-style: none;
   color: white;
   justify-content: space-evenly;
@@ -250,4 +337,36 @@ input {
   color: white;
   text-decoration: none;
   line-height: 80px;
+}
+
+/* Error CSS */
+.errorPage {
+    height: 100vh;
+    padding-top: 200px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.errorPage h1 {
+    font-size: 90px;
+    font-weight: 300;
+    color: rgb(61, 61, 61);
+}
+
+.errorPage p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.errorNavLink {
+    color: rgb(40, 78, 160);
+    text-decoration: none;
+    line-height: 50px;
+    border-bottom: 2px solid whitesmoke;
+    transition: border-bottom 300ms;
+}
+
+.errorNavLink:hover {
+    border-bottom: 2px solid rgb(40, 78, 160);
+    transition: border-bottom 300ms;
 }

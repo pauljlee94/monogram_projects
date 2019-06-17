@@ -9,10 +9,6 @@ function Footer() {
         </li>
         <p>|</p>
         <li>
-          <a href="#">About</a>
-        </li>
-        <p>|</p>
-        <li>
           <a href="#">Portfolio</a>
         </li>
         <p>|</p>

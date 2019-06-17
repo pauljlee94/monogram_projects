@@ -6,27 +6,27 @@ import youtube from "./img/youtube.png";
 
 function Connect() {
   return (
-    <div class="connect">
+    <div className="connect">
       <h3>Stay Connected</h3>
       <ul>
         <li>
-          <a href="https://www.facebook.com" target="_blank">
-            <img class="icon" src={facebook} />
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <img className="icon" src={facebook} alt="Facebook icon"/>
           </a>
         </li>
         <li>
-          <a href="https://www.twitter.com/" target="_blank">
-            <img class="icon" src={twitter} />
+          <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+            <img className="icon" src={twitter} alt="Twitter icon"/>
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/" target="_blank">
-            <img class="icon" src={instagram} />
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+            <img className="icon" src={instagram} alt="Instagram icon"/>
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com/" target="_blank">
-            <img class="icon" src={youtube} />
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+            <img className="icon" src={youtube} alt="Youtube icon"/>
           </a>
         </li>
       </ul>
