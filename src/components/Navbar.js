@@ -18,8 +18,12 @@ class Navbar extends React.Component {
     return (
       <div
         className="navbar"
-        style={{ backgroundColor: "rgba(45,45,45," + this.state.opacity + ")",
-    boxShadow: "0 0 5px 0 rgba(0,0,0," + this.state.opacity + ")" }}
+        style={{
+          backgroundColor: "rgba(45,45,45," + this.state.opacity + ")",
+          boxShadow: "0 0 5px 0 rgba(0,0,0," + this.state.opacity + ")"
+        }}
+        data-aos="fade-down"
+        data-aos-duration="1500"
       >
         <h1>
           <a href="#">Monogram Projects</a>
@@ -29,7 +33,7 @@ class Navbar extends React.Component {
             <a href="#">About</a>
           </li>
           <li>
-            <a href="#">Property</a>
+            <a href="#">Portfolio</a>
           </li>
           <li>
             <a href="#">Contact</a>
