@@ -82,11 +82,58 @@
     font-size: 30px;
 }
 
+/* About CSS */
+.about {
+    padding: 3em;
+    margin:auto;
+    background-color: whitesmoke;
+}
+
+.about hr {
+    margin: 30px auto;
+    width: 350px;
+    border: 1px solid rgb(226, 226, 226);
+}
+
+.aboutQuote {
+    text-align: center;
+    color: rgb(66, 66, 66);
+}
+
+.aboutQuote h2 {
+    font-weight: 400;
+}
+
+.aboutQuote p {
+    font-weight: 400;
+}
+
+.about strong {
+    font-weight: 500;
+}
+
+.aboutText{
+    margin: auto;
+    padding-top: 2em;
+    width: 80vw;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: rgb(43, 43, 43);
+}
+
+@media (min-width: 1000px){
+    .aboutText {
+        width: 900px;
+    }
+}
+
+
 /* Contact CSS */
 .contact{
-    padding-top: 5em;
+    padding: 5em 0;
     background-color: white;
     text-align: center;
+    background-color: whitesmoke;
 }
 
 .contact h1{
@@ -104,7 +151,8 @@
 textarea{ 
     width: 80vw;
     height:20em;
-    border: 1px solid black;
+    border: 1px solid rgb(145, 145, 145);
+    resize: none;
 }
 
 label {
@@ -115,7 +163,7 @@ input {
     margin: 3px 0 10px 0;
     width: 80vw;
     font-size: 20px;
-    border: 1px solid black;
+    border: 1px solid rgb(145, 145, 145);
 }
 
 .submitButton {
@@ -125,12 +173,12 @@ input {
     display: block;
     font-family: "Roboto", sans-serif;
     cursor: pointer;
+    background-color: white;
 }
 
 .submitButton:hover {
-    background-color: rgb(90, 90, 90);
-    color: white;
-    border: rgb(90, 90, 90);
+    background-color: rgb(218, 218, 218);
+    border: 1px solid rgb(145, 145, 145);
 }
 
 @media (min-width: 600px){
@@ -146,6 +194,43 @@ input {
         width: 500px;
     }
 
+}
+
+/* Connect CSS*/
+.connect{
+    background-color:white;
+    padding: 25px 0;
+    width: 100%;
+    height: 150px;
+    text-align:center;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    font-size: 1.25em;
+}
+
+.connect h3 {
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.connect ul {
+    padding: 0;
+}
+
+.connect li{
+    display: inline;
+    list-style: none;
+}
+
+.icon {
+    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.icon:hover {
+    opacity: .5;
 }
 
 /* Footer CSS */

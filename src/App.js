@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import About from "./components/About"
 import Contact from "./components/Contact"
+import Connect from "./components/Connect"
 import Footer from "./components/Footer"
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Home />
       <About />
       <Contact />
+      <Connect />
       <Footer />
     </div>
   );

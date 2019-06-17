@@ -19,7 +19,7 @@ class Navbar extends React.Component {
       <div
         className="navbar"
         style={{ backgroundColor: "rgba(45,45,45," + this.state.opacity + ")",
-    boxShadow: "0 0 10px 0 rgba(0,0,0," + this.state.opacity + ")" }}
+    boxShadow: "0 0 5px 0 rgba(0,0,0," + this.state.opacity + ")" }}
       >
         <h1>
           <a href="#">Monogram Projects</a>
