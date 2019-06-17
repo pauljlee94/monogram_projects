@@ -326,6 +326,7 @@ textarea:hover {
 }
 
 .footer ul {
+  display: flex;
   padding: 0;
   list-style: none;
   color: white;
