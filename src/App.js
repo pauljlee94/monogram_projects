@@ -10,15 +10,18 @@ import Error from "./components/Error";
 
 AOS.init();
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" component={Main} exact />
-        <Route component={Error} />
-      </Switch>
-    </BrowserRouter>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={Main} exact />
+          <Route path="/:id" component={PropertyPage} />
+          <Route component={Error} />
+        </Switch>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;

@@ -8,6 +8,38 @@
   scroll-behavior: smooth;
 }
 
+/* Error Page CSS */
+.errorPage {
+  height: 100vh;
+  padding-top: 200px;
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+.errorPage h1 {
+  font-size: 90px;
+  font-weight: 300;
+  color: rgb(61, 61, 61);
+}
+
+.errorPage p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.errorNavLink {
+  color: rgb(40, 78, 160);
+  text-decoration: none;
+  line-height: 50px;
+  border-bottom: 2px solid whitesmoke;
+  transition: border-bottom 300ms;
+}
+
+.errorNavLink:hover {
+  border-bottom: 2px solid rgb(40, 78, 160);
+  transition: border-bottom 300ms;
+}
+
 /* Navbar CSS */
 .navbar {
   position: fixed;
@@ -35,7 +67,7 @@
 
 .navbar ul {
   margin-right: 0.5em;
-  justify-self: end;
+  float: right;
   padding: 0;
   display: flex;
   list-style: none;
@@ -60,9 +92,164 @@
   width: 100%;
 }
 
+@media (max-width: 670px) {
+  .navbar {
+    grid-template-columns: 5fr 1fr;
+  }
+  .navbar ul {
+    margin-right: 0.5em;
+    float: none;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Mobile Navbar CSS */
+.mobileNav {
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  border-top: solid 1px rgb(170, 170, 170);
+  left: -100%;
+  transition: transform 500ms ease-in;
+  background-color: whitesmoke;
+  z-index: -4 !important;
+}
+
+.mobileNav ul {
+  text-align: center;
+  margin:0;
+  padding: 0;
+}
+
+.mobileNav li {
+  margin: 0;
+  padding:1em 0 1em 0;
+  width: 100%;
+  font-weight: 700;
+  border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+.mobileNav a {
+  color:black;
+}
+
+.mobileNav a:hover {
+  color:rgb(80, 80, 80);
+  text-decoration: underline;
+}
+
+.mobileNav.active{
+  transform: translateX(100%);
+}
+
+/* Nav Hamburger CSS 
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.5;
+}
+.hamburger.is-active:hover {
+  opacity: 0.5;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: white;
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--squeeze .hamburger-inner::before {
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+.hamburger--squeeze .hamburger-inner::after {
+  transition: bottom 0.075s 0.12s ease,
+    transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--squeeze.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+.hamburger--squeeze.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.075s ease,
+    transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@media (min-width: 670px) {
+  .hamburger {
+    display: none;
+  }
+}
+
 /* Home CSS */
 .home {
-  padding: 45vh 0;
+  padding: 45vh 50px;;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -84,7 +271,7 @@
 
 /* About CSS */
 .about {
-  padding: 2em 0 6em 0;
+  padding: 60px 0 110px 0;
   margin: auto;
   background-color: whitesmoke;
 }
@@ -127,23 +314,91 @@
   }
 }
 
+/* Portfolio CSS */
+
+.portfolio {
+  background-color: whitesmoke;
+}
+
+.propertyTile {
+  width: 100%;
+  transition: 200ms;
+}
+
+.propertyTile img {
+  cursor: pointer;
+  width: 100%;
+}
+
+.propertyTile h2 {
+  padding: 15px;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+  color:rgb(32, 32, 32);
+}
+
+.propertyTile span{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+.propertyTile p {
+  padding: 0 10px 30px 10px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgb(80, 80, 80);
+}
+
+.propertyTile:hover {
+  filter: brightness(0.7);
+  transition: filter 200ms;
+}
+
+.propertyTile:hover 
+.listingName{
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .propertyTile {
+    width: 48%;
+    margin: 1%;
+  }
+  .propertyTile p {
+    padding-bottom: 15px; 
+  }
+}
+
 /* Contact CSS */
+.contactSection {
+  background-color: whitesmoke;
+  padding: 100px 0 130px 0;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
   padding: 1em;
-  margin: 2em 30px;
+  margin: 0 30px;
   background-color: rgb(26, 28, 32);
 }
 
-a.anchor {
+.anchor {
   display: block;
   position: relative;
   top: -120px;
   visibility: hidden;
 }
 
-.contactText{
+.contactText {
   margin: auto;
   padding-bottom: 40px;
   width: 75vw;
@@ -199,6 +454,7 @@ textarea {
   resize: none;
   width: 75vw;
   background-color: rgb(43, 46, 51);
+  color: white;
   margin: 3px 0 10px 0;
   font-size: 20px;
   border: none;
@@ -236,7 +492,7 @@ textarea:hover {
 @media (min-width: 700px) {
   .contact {
     width: 650px;
-    margin: 2em auto;
+    margin: auto;
   }
 
   .contactText {
@@ -254,7 +510,7 @@ textarea:hover {
 
 @media (min-width: 1000px) {
   .contact {
-    margin: 2em auto;
+    margin: auto;
     width: 950px;
     flex-direction: row;
     padding: 20px 30px;
@@ -264,7 +520,7 @@ textarea:hover {
     justify-self: center;
   }
 
-  .contactText{
+  .contactText {
     margin: 0 20px 0 0;
   }
 
@@ -283,7 +539,6 @@ textarea:hover {
 
 /* Connect CSS*/
 .connect {
-  background-color: white;
   padding: 25px 0;
   width: 100%;
   height: 150px;
@@ -340,34 +595,22 @@ textarea:hover {
   line-height: 80px;
 }
 
-/* Error CSS */
-.errorPage {
-    height: 100vh;
-    padding-top: 200px;
-    background-color: whitesmoke;
-    text-align: center;
+/* Property Page Navbar */
+.propertyPageNav {
+  position: fixed;
+  display: grid;
+  align-content: center;
+  width: 100%;
+  height: 5em;
+  z-index: 100;
+  background-color: rgb(35,35,35);
+  box-shadow: 0 0 5px 0;
 }
 
-.errorPage h1 {
-    font-size: 90px;
-    font-weight: 300;
-    color: rgb(61, 61, 61);
+.propertyPageNav img:hover {
+  opacity: .6;
 }
 
-.errorPage p {
-    font-size: 20px;
-    font-weight: 300;
-}
-
-.errorNavLink {
-    color: rgb(40, 78, 160);
-    text-decoration: none;
-    line-height: 50px;
-    border-bottom: 2px solid whitesmoke;
-    transition: border-bottom 300ms;
-}
-
-.errorNavLink:hover {
-    border-bottom: 2px solid rgb(40, 78, 160);
-    transition: border-bottom 300ms;
+.image-gallery { 
+  padding-top: 5em;
 }
