@@ -13,6 +13,7 @@ class Navbar extends React.Component {
     this.handleResize = this.handleResize.bind(this)
     this.handleClick = this.handleClick.bind(this)
     this.handleScroll = this.handleScroll.bind(this)
+    this.closenav = this.closenav.bind(this)
   }
 
   handleResize() {
@@ -47,9 +48,10 @@ class Navbar extends React.Component {
     this.state.hamburger === "hamburger hamburger--squeeze" ? 
     this.setState({hamburger: "hamburger hamburger--squeeze is-active", mobile: "mobileNav active"}) :
     this.setState({hamburger: "hamburger hamburger--squeeze", mobile: "mobileNav"})
-    
-    
-    
+  }
+
+  closenav() {
+    this.setState({hamburger: "hamburger hamburger--squeeze", mobile: "mobileNav"})
   }
 
   render() {
@@ -74,10 +76,10 @@ class Navbar extends React.Component {
         <div className={this.state.mobile}>
           <ul>
             <li>
-              <a href="#">Portfolio</a>
+              <a href="#portfolio" onClick={this.closenav}>Portfolio</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" onClick={this.closenav}>Contact</a>
             </li>
           </ul>
         </div>

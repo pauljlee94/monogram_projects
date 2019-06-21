@@ -1,9 +1,7 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
 
 import listingData from "./listingData";
 import PropertyTile from "./PropertyTile";
-import PropertyPage from "./PropertyPage"
 
 class Property extends React.Component {
   constructor() {
@@ -25,7 +23,10 @@ class Property extends React.Component {
       />
       ));
     return (
-      <div className="portfolio" >{listings}</div>
+      <div>
+        <div className="anchor" id="portfolio"></div>
+        <div className="portfolio" >{listings}</div>
+      </div>
     )
   }
 }
