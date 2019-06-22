@@ -249,10 +249,10 @@
 
 /* Home CSS */
 .home {
-  padding: 45vh 50px;;
+  padding: 45vh 50px;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height:  100vh;
   transition: background-image 2s ease-in;
 }
 
@@ -386,7 +386,7 @@
 .contact {
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 30px;
   margin: 0 30px;
   background-color: rgb(26, 28, 32);
 }
@@ -426,151 +426,36 @@
   font-weight: 500 !important;
 }
 
-.contactform {
+.mailButton {
+  width: 100%;
+  height: 50px;
   margin: auto;
   display: block;
-}
-
-label {
-  color: white;
-  float: left;
-  font-weight: 300;
-}
-
-input {
-  color: white;
-  background-color: rgb(43, 46, 51);
-  margin: 3px 0 15px 0;
-  font-size: 20px;
-  border: none;
-  border-bottom: 2px solid rgb(43, 46, 51);
-  width: 75vw;
-  height: 40px;
-  transition: border 500ms;
-}
-
-textarea {
-  height: 250px;
-  resize: none;
-  width: 75vw;
-  background-color: rgb(43, 46, 51);
-  color: white;
-  margin: 3px 0 10px 0;
-  font-size: 20px;
-  border: none;
-  border-bottom: 2px solid rgb(43, 46, 51);
-  transition: border 500ms;
-}
-
-input:hover {
-  border-bottom: 2px solid white;
-  transition: border 500ms;
-}
-
-textarea:hover {
-  border-bottom: 2px solid white;
-  transition: border 500ms;
-}
-
-.submitButton {
-  width: 100px;
-  height: 40px;
-  margin: 10px auto;
-  display: block;
-  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  line-height: 50px;
+  font-weight: 500;
   cursor: pointer;
   background-color: rgb(43, 46, 51);
   color: rgb(221, 221, 221);
   border: 2px solid rgb(43, 46, 51);
 }
 
-.submitButton:hover {
+.mailButton:hover {
   border: 2px solid white;
   transition: border 500ms;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .contact {
-    width: 650px;
+    width: 550px;
     margin: auto;
   }
 
   .contactText {
     width: 600px;
   }
-
-  input {
-    width: 600px;
-  }
-
-  textarea {
-    width: 600px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .contact {
-    margin: auto;
-    width: 950px;
-    flex-direction: row;
-    padding: 20px 30px;
-  }
-
-  .contactForm {
-    justify-self: center;
-  }
-
-  .contactText {
-    margin: 0 20px 0 0;
-  }
-
-  .contactform {
-    width: 500px;
-  }
-
-  input {
-    width: 500px;
-  }
-
-  textarea {
-    width: 500px;
-  }
-}
-
-/* Connect CSS*/
-.connect {
-  padding: 25px 0;
-  width: 100%;
-  height: 150px;
-  text-align: center;
-  background-color: rgb(43, 43, 43);
-  color: white;
-  font-size: 1.25em;
-}
-
-.connect h3 {
-  font-size: 20px;
-  font-weight: 400;
-  padding-bottom: 20px;
-}
-
-.connect ul {
-  padding: 0;
-}
-
-.connect li {
-  display: inline;
-  list-style: none;
-}
-
-.icon {
-  margin: 0 10px;
-  width: 50px;
-  height: 50px;
-}
-
-.icon:hover {
-  opacity: 0.6;
 }
 
 /* Footer CSS */
@@ -666,7 +551,7 @@ textarea:hover {
 
 .propertyPage span{
   color: rgb(54, 54, 54);
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .propertyPage .status{

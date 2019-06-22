@@ -51,7 +51,9 @@ class Navbar extends React.Component {
   }
 
   closenav() {
-    this.setState({hamburger: "hamburger hamburger--squeeze", mobile: "mobileNav"})
+    if (this.state.mobile === "mobileNav active") {
+      this.setState({hamburger: "hamburger hamburger--squeeze", mobile: "mobileNav"})
+    }
   }
 
   render() {

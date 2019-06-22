@@ -32,9 +32,9 @@ class Home extends React.Component {
         }}
       >
         <div className="motto" data-aos="fade-up" data-aos-duration="1500">
-          <h1>Modern Design & Casual Living</h1>
+          <h1>Monogram Projects</h1>
           <br />
-          <span>Your Dreams, Our Design</span>
+          <span>Design & Construction</span>
         </div>
       </div>
     );

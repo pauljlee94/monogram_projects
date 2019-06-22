@@ -56,7 +56,6 @@ class Casco extends React.Component {
                 Size <span>{this.state.data[3].area}sqft</span> 
                 Beds <span>{this.state.data[3].beds}</span> 
                 Baths <span>{this.state.data[3].baths}</span> 
-                Stories <span>{this.state.data[3].stories}</span>
                 Cars <span>{this.state.data[3].cars}</span> 
                 </h3>
                 <h3 className="status">{this.state.data[3].status}</h3>
