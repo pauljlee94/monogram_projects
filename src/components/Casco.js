@@ -15,12 +15,6 @@ class Casco extends React.Component {
   }
 
   render() {
-    const descriptions = this.state.data[3].description.map(description => (
-      <div>
-        <p>-{description}</p>
-        <br />
-      </div>
-    ));
     const images = [
       {
         original: this.state.data[3].mainImage,
@@ -29,6 +23,10 @@ class Casco extends React.Component {
       {
         original: "./images/cascoWay/1.png",
         thumbnail: "./images/cascoWay/1.png"
+      },
+      {
+        original: "./images/cascoWay/2.png",
+        thumbnail: "./images/cascoWay/2.png"
       }
 
     ];
@@ -61,7 +59,7 @@ class Casco extends React.Component {
                 <h3 className="status">{this.state.data[3].status}</h3>
                 <br/>
                 <br/>
-                {descriptions}
+                <p>Contact us for details!</p>
             </div>
          </div>
       </div>

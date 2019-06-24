@@ -25,61 +25,17 @@ class Dartmoor extends React.Component {
       {
         original: this.state.data[0].mainImage,
         thumbnail: this.state.data[0].mainImage
-      },
-      {
-        original: "./images/dartmoorLane/1.jpg",
-        thumbnail: "./images/dartmoorLane/1.jpg"
-      },
-      {
-        original: "./images/dartmoorLane/3.jpg",
-        thumbnail: "./images/dartmoorLane/3.jpg"
-      },
-      {
-        original: "./images/dartmoorLane/4.jpg",
-        thumbnail: "./images/dartmoorLane/4.jpg"
-      },
-      {
-        original: "./images/dartmoorLane/5.jpg",
-        thumbnail: "./images/dartmoorLane/5.jpg"
-      },
-      {
-        original: "./images/dartmoorLane/6.jpg",
-        thumbnail: "./images/dartmoorLane/6.jpg"
-      },
-      {
-        original: "./images/dartmoorLane/7.jpg",
-        thumbnail: "./images/dartmoorLane/7.jpg"
-      },
-      {
-        original: "./images/dartmoorLane/8.jpg",
-        thumbnail: "./images/dartmoorLane/8.jpg"
-      },
-      {
-        original: "./images/dartmoorLane/9.jpg",
-        thumbnail: "./images/dartmoorLane/9.jpg"
-      },
-      {
-        original: "./images/dartmoorLane/9.jpg",
-        thumbnail: "./images/dartmoorLane/9.jpg"
-      },
-      {
-        original: "./images/dartmoorLane/10.jpg",
-        thumbnail: "./images/dartmoorLane/10.jpg"
-      },
-      {
-        original: "./images/dartmoorLane/11.jpg",
-        thumbnail: "./images/dartmoorLane/11.jpg"
-      },
-      {
-        original: "./images/dartmoorLane/12.jpg",
-        thumbnail: "./images/dartmoorLane/12.jpg"
-      },      
-      {
-        original: "./images/dartmoorLane/13.jpg",
-        thumbnail: "./images/dartmoorLane/13.jpg"
       }
+    ]
 
-    ];
+    for(let i=1; i<40; i++) {
+      let obj = {
+        original: `./images/dartmoorLane/${i}.jpg`,
+        thumbnail: `./images/dartmoorLane/${i}.jpg`
+      }
+      images.push(obj)
+    }
+   
     return (
       <div className="propertyPage">
         <nav className="propertyPageNav">

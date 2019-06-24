@@ -249,29 +249,42 @@
 
 /* Home CSS */
 .home {
-  padding: 45vh 50px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   background-size: cover;
   background-position: center;
-  height:  100vh;
+  height:  40vh;
   transition: background-image 2s ease-in;
 }
 
 .motto {
+  margin-top: 50px;
   text-align: center;
   color: white;
 }
 
 .motto h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .motto span {
   font-size: 30px;
 }
 
+@media (min-width: 900px) {
+  .motto h1 {
+    font-size: 50px;
+  }
+  
+  .motto span {
+    font-size: 30px;
+  }
+}
+
 /* About CSS */
 .about {
-  padding: 60px 0 110px 0;
+  padding: 60px 0 90px 0;
   margin: auto;
   background-color: whitesmoke;
 }
@@ -298,22 +311,6 @@
 .about strong {
   font-weight: 500;
 }
-
-.aboutText {
-  margin: auto;
-  padding-top: 2em;
-  width: 80vw;
-  font-size: 1.2em;
-  font-weight: 300;
-  color: rgb(43, 43, 43);
-}
-
-@media (min-width: 1000px) {
-  .aboutText {
-    width: 900px;
-  }
-}
-
 /* Portfolio CSS */
 
 .portfolio {
